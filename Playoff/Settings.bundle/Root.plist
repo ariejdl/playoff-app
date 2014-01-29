@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string></string>
+			<key>Key</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>About</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>AutocapitalizationType</key>
+			<string>None</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+			<key>DefaultValue</key>
+			<string>1.0</string>
+			<key>IsSecure</key>
+			<false/>
+			<key>Key</key>
+			<string>version</string>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+			<key>Title</key>
+			<string>Version</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+	</array>
+	<key>isLoggedIn</key>
+	<false/>
+	<key>lastLogin</key>
+	<date>2013-07-30T12:00:06Z</date>
+	<key>lastClearedCache</key>
+	<date>2013-07-30T12:16:41Z</date>
+	<key>hasUsedFacebook</key>
+	<false/>
+	<key>hasUsedTwitter</key>
+	<false/>
+	<key>alwaysUploadOnCellular</key>
+	<false/>
+	<key>followingFeedItemCount</key>
+	<integer>1</integer>
+	<key>----</key>
+	<string></string>
+	<key>serialisedVideosToUpload</key>
+	<dict/>
+	<key>-------</key>
+	<string></string>
+	<key>uploadsToTwitterShare</key>
+	<dict/>
+	<key>uploadsToFacebookShare</key>
+	<dict/>
+	<key>uploadsToYouTubeShare</key>
+	<dict/>
+</dict>
+</plist>

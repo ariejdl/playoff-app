@@ -1,0 +1,46 @@
+PODS:
+  - AFNetworking (1.1.0)
+  - ASIHTTPRequest (1.8.1):
+    - ASIHTTPRequest/ASIWebPageRequest
+    - ASIHTTPRequest/CloudFiles
+    - ASIHTTPRequest/S3
+    - Reachability
+  - ASIHTTPRequest/ASIWebPageRequest (1.8.1):
+    - Reachability
+  - ASIHTTPRequest/CloudFiles (1.8.1):
+    - Reachability
+  - ASIHTTPRequest/S3 (1.8.1):
+    - Reachability
+  - DAKeyboardControl (2.2.0)
+  - Facebook-iOS-SDK (3.5.1)
+  - MHPrettyDate (1.1.0)
+  - Reachability (3.1.0)
+  - SDWebImage (3.2):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.2)
+  - SSPullToRefresh (1.1.2)
+  - StackMob (1.4.0):
+    - AFNetworking (= 1.1.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - ASIHTTPRequest
+  - DAKeyboardControl (~> 2.2.0)
+  - Facebook-iOS-SDK
+  - MHPrettyDate
+  - SDWebImage
+  - SSPullToRefresh
+  - StackMob (= 1.4.0)
+
+SPEC CHECKSUMS:
+  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  ASIHTTPRequest: a411b8d0f006ed8fc24248be6a0c4ad2abc9b101
+  DAKeyboardControl: 64d5b35257a433abbcea57202b741f72c623d9ca
+  Facebook-iOS-SDK: 0dbd897e842cefeb012ec2eb8eba659ba6b96b12
+  MHPrettyDate: 8194b2a0ba3a8c887a536f1735467f41e16e216c
+  Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
+  SDWebImage: f742ac91b65bd34b6d452325115e2ded3a73380e
+  SSPullToRefresh: 8d8360b0ff0dc7b344656b48ddf9732c47e78806
+  StackMob: ca24fedbab2fb33536ebc77c807af750fa1c91ae
+
+COCOAPODS: 0.20.2

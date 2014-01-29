@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CuratedPlayoffThread" syncable="YES">
+        <attribute name="curatedplayoff_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playoffthread_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="playoffthread" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PlayoffThread" inverseName="curated_item" inverseEntity="PlayoffThread" syncable="YES"/>
+    </entity>
+    <entity name="PlayoffComment" representedClassName="PlayoffComment" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="playoff_item_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playoffcomment_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="playoff" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlayoffItem" inverseName="comments" inverseEntity="PlayoffItem" syncable="YES"/>
+        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="playoffComment" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="PlayoffItem" representedClassName="PlayoffItem" syncable="YES">
+        <attribute name="approved_for_sharing" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="flagged_count" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="hasAncillaryVideos" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="imageId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isVideo" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="likes_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="payload_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playoffitem_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayoffComment" inverseName="playoff" inverseEntity="PlayoffComment" syncable="YES"/>
+        <relationship name="likers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="likes" inverseEntity="User" syncable="YES"/>
+        <relationship name="thread" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PlayoffThread" inverseName="playoffs" inverseEntity="PlayoffThread" syncable="YES"/>
+        <relationship name="tracks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayoffVideoTrack" inverseName="playoff" inverseEntity="PlayoffVideoTrack" syncable="YES"/>
+    </entity>
+    <entity name="PlayoffThread" representedClassName="PlayoffThread" syncable="YES">
+        <attribute name="approved_for_sharing" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="likes_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="playoffthread_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="popular1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="popular2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="popular3" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="curated_item" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CuratedPlayoffThread" inverseName="playoffthread" inverseEntity="CuratedPlayoffThread" syncable="YES"/>
+        <relationship name="most_popular1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayoffItem" inverseName="thread" inverseEntity="PlayoffItem" syncable="YES"/>
+        <relationship name="most_popular2" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayoffItem" inverseName="thread" inverseEntity="PlayoffItem" syncable="YES"/>
+        <relationship name="most_popular3" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayoffItem" inverseName="thread" inverseEntity="PlayoffItem" syncable="YES"/>
+        <relationship name="playoffs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayoffItem" inverseName="thread" inverseEntity="PlayoffItem" syncable="YES"/>
+    </entity>
+    <entity name="PlayoffVideoTrack" representedClassName="PlayoffVideoTrack" syncable="YES">
+        <attribute name="globalStart" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="globalStartTimescale" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="innerDuration" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="innerDurationTimescale" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="innerTimeRangeDur" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="innerTimeRangeDurTimescale" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="innerTimeRangeStart" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="innerTimeRangeStartTimescale" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="layerPosition" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="outerDuration" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="outerDurationTimescale" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="payload_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playoffVideoId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playoffvideotrack_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoHash" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="volume" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="playoff" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayoffItem" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profile_image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="superuser" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="followers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="following" inverseEntity="User" syncable="YES"/>
+        <relationship name="following" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="followers" inverseEntity="User" syncable="YES"/>
+        <relationship name="likes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayoffItem" inverseName="likers" inverseEntity="PlayoffItem" syncable="YES"/>
+        <relationship name="playoffComment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlayoffComment" inverseName="user" inverseEntity="PlayoffComment" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CuratedPlayoffThread" positionX="-956" positionY="387" width="128" height="90"/>
+        <element name="PlayoffComment" positionX="-738" positionY="-99" width="128" height="133"/>
+        <element name="PlayoffItem" positionX="-540" positionY="120" width="128" height="328"/>
+        <element name="PlayoffThread" positionX="-783" positionY="324" width="128" height="208"/>
+        <element name="PlayoffVideoTrack" positionX="-281" positionY="144" width="128" height="313"/>
+        <element name="User" positionX="-324" positionY="-99" width="128" height="195"/>
+    </elements>
+</model>
